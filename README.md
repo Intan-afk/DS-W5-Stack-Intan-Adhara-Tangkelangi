@@ -9,3 +9,6 @@ Pada Program NOMOR3 mensimulasikan mesin waktu menggunakan stack dengan intruksi
 
 # Nomor 4
 Program nomor 4 menggunakan stack untuk memproses dan mengurutkan data dari yang terkecil ke yang paling besar 
+
+# Nomor 5
+program ini menghitung momentum setiap pantulan bom menggunakan pola perhitungan berulang yang disimpan dalam stack sampai mencapai nilai dari target.
