@@ -11,7 +11,7 @@ public class NOMOR5 {
         stack.push(value);
 
         while (value < n) {
-            int next = value*2;
+            int next = value*2; 
             value = stack.pop();
             if (next > n) {
                 next = value;

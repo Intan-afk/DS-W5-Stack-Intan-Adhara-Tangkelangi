@@ -1,27 +1,27 @@
 
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Stack;
-
 public class NOMOR4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Stack<Integer> stack = new Stack<>();
         Stack<Integer> tempStack = new Stack<>();
+        Random rand = new Random();
 
-        System.out.print("Kasmir Tampan");
-        System.out.println(" ");
-        System.out.print("Masukkan angka: ");
-        
-        String input = scanner.nextLine();
-        String[] tokens = input.split(" "); 
+        System.out.println("Kasmir Tampan");
+        System.out.print("Masukkan jumlah angka yang diinginkan: ");
+        int n = scanner.nextInt();  
 
-        for (String token : tokens) {
-            int number = Integer.parseInt(token);
+        System.out.print("Angka yang dimasukkan: ");
+        for (int i = 0; i < n; i++) {
+            int number = rand.nextInt(100) + 1; 
+            System.out.print(number + " ");
             stack.push(number);
         }
-        System.out.print("Kasmir Ganteng Banget");
-        System.out.println(" ");
 
+        System.out.println("\nKasmir Ganteng Banget");
+        
         while (!stack.isEmpty()) {
             int temp = stack.pop();
             while (!tempStack.isEmpty() && tempStack.peek() > temp) {
@@ -29,10 +29,10 @@ public class NOMOR4 {
             }
             tempStack.push(temp);
         }
-        System.out.println(" ");
-        System.out.print("Hasil: ");
+
+        System.out.println("\nHasil: ");
         while (!tempStack.isEmpty()) {
             System.out.print(tempStack.remove(0) + " ");
         }
-    } 
+    }
 }

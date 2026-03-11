@@ -10,16 +10,16 @@ public class NOMOR1 {
         
     }
      public static boolean isBalanced(String input) {
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> stack = new Stack<>(); //LIFO
         
         for (char c : input.toCharArray()) {
-            if (c == '(' || c == '{' || c == '[') {
-                stack.push(c);
+            if (c == '(' || c == '{' || c == '[') { 
+                stack.push(c);//menambahkan
             } else if (c == ')' || c == '}' || c == ']') {
                 if (stack.isEmpty()) {
                     return false;
                 }
-                char top = stack.pop();
+                char top = stack.pop(); //mangambil dan menghapus elemen teratas
                 if ((c == ')' && top != '(') ||
                     (c == '}' && top != '{') ||
                     (c == ']' && top != '[')) {

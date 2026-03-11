@@ -14,18 +14,17 @@ public class NOMOR2 {
                     case "*" -> result = a * b;
                     case "/" -> result = a / b;
                 }
-                stack.push(result);
+                stack.push(result); 
             } else {
                 int number = Integer.parseInt(token);
                 stack.push(number);
             }
         }
         int finalResult = stack.pop();
-        finalResult = finalResult+13;
         return finalResult;
     }
     public static void main(String[] args) {
-        String[] tokens = {"2", "1", "+", "3", "*"};
+        String[] tokens = {"5", "3", "-", "5", "*"};
         int result = evaluateRPN(tokens);
         System.out.println("Final Result: " + result);
     }
